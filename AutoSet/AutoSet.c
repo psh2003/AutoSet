@@ -32,6 +32,7 @@ int main(void)
     {
         perror("폴더 생성 실패 - 폴더가 이미 있거나 부정확함\n");
         printf("errorno : %d", errno);
+        system("pause > nul");
         return 0;
     }
 
@@ -47,6 +48,7 @@ int main(void)
     {
         perror("폴더 생성 실패 - 폴더가 이미 있거나 부정확함\n");
         printf("errorno : %d", errno);
+        system("pause > nul");
         return 0;
     }
     char strChangeDir[_MAX_PATH] = { "D:\\Code" };
@@ -88,7 +90,7 @@ int main(void)
         }
     }
 
-
+    system("pause > nul");
     return 0;
 }
 
