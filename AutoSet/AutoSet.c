@@ -18,7 +18,7 @@ int main(void)
     char tempPath[MAX] = "D:\\Code\\";
 
     printf("프로젝트 이름을 입력하세요\n");
-    scanf("%[^\n]s", name);
+    scanf("%s", name);
 
     strcat(tempPath, name);
     printf(tempPath);
@@ -32,6 +32,7 @@ int main(void)
     {
         perror("폴더 생성 실패 - 폴더가 이미 있거나 부정확함\n");
         printf("errorno : %d", errno);
+        return 0;
     }
 
     strcat(tempPath, "\\workspace");
@@ -46,6 +47,7 @@ int main(void)
     {
         perror("폴더 생성 실패 - 폴더가 이미 있거나 부정확함\n");
         printf("errorno : %d", errno);
+        return 0;
     }
     char strChangeDir[_MAX_PATH] = { "D:\\Code" };
 
